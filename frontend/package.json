@@ -5,6 +5,7 @@
     "@ant-design/icons": "^4.6.2",
     "antd": "^5.14.1",
     "axios": "*",
+    "babel": "^6.23.0",
     "babel-plugin-import": "^1.13.8",
     "craco": "^0.0.3",
     "craco-less": "^3.0.1",
@@ -21,6 +22,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
+    "typescript": "^5.3.3",
     "web-vitals": "^1.0.1",
     "webpack": "^5.90.1"
   },

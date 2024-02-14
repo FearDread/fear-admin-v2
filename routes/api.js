@@ -51,4 +51,10 @@ router
 router.route("/product/search").get(catchErrors(productController.search));
 router.route("/product/list").get(catchErrors(productController.list));
 
+router.route("/routes").get(function () {
+  let get = app._router.stack.filter(r => r.route && r.route.methods.get).map(r => r.route.path);
+  let post = app._router.stack.filter(r => r.route && r.route.methods.post).map(r => r.route.path);
+  res.send({ get: get, post: post });
+});  
+
 module.exports = router;
