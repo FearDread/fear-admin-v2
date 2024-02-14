@@ -1,10 +1,12 @@
 require("dotenv").config({ path: __dirname + "/../.variables.env" });
 const fs = require("fs");
+const db = require('../data/db');
 
+/*
 const mongoose = require("mongoose");
 mongoose.connect(process.env.DATABASE);
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
-
+*/
 // import all of our models - they need to be imported only once
 
 // const patients = JSON.parse(
@@ -33,6 +35,8 @@ mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 //     process.exit();
 //   }
 // }
+
+db.run();
 
 async function createAdmin() {
   try {

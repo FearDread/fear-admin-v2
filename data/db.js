@@ -1,3 +1,4 @@
+/*
 const { MongoClient, ServerApiVersion } = require("mongodb");
 // Replace the placeholder with your Atlas connection string
 require("dotenv").config({ path: __dirname + "/../.variables.env" });
@@ -24,6 +25,21 @@ async function run() {
     await client.close();
   }
 }
+*/
+const mongoose = require("mongoose");
+require("dotenv").config({ path: __dirname + "/../.variables.env" });
 
-module.exports = run;
+module.exports.run = () => {
+    mongoose.set("strictQuery", false); 
+    mongoose.set('useNewUrlParser', true);
+
+    mongoose
+        .connect(process.env.DATABASE)
+        .then(function () {
+            console.log("Pinged your deployment. You successfully connected to MongoDB!");
+        })
+        .catch(function (err) {
+            console.log("error", err);
+        })
+};
 //run().catch(console.dir);
