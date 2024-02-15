@@ -1,6 +1,6 @@
 require("dotenv").config({ path: __dirname + "/../.variables.env" });
 const fs = require("fs");
-const db = require('../data/db');
+const db = require('../backend/data/db');
 
 /*
 const mongoose = require("mongoose");
@@ -40,7 +40,7 @@ db.run();
 
 async function createAdmin() {
   try {
-    const Admin = require("../models/Admin");
+    const Admin = require("../backend/models/Admin");
     var newAdmin = new Admin();
     const passwordHash = newAdmin.generateHash("123456");
 

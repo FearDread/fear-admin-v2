@@ -6,4 +6,5 @@ frontend/node_modules/
 notes.md
 .variables.env
 yarn.lock
-
+.yarn.lock
+frontend/yarn.lock
