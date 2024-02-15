@@ -4,11 +4,11 @@ const { catchErrors } = require("../handlers/errorHandlers");
 const router = express.Router();
 
 const adminController = require("../controllers/adminController");
+/*
 const clientController = require("../controllers/clientController");
-
 const leadController = require("../controllers/leadController");
 const productController = require("../controllers/productController");
-
+*/
 //_______________________________ Admin management_______________________________
 
 router.route("/admin/create").post(catchErrors(adminController.create));
@@ -22,7 +22,7 @@ router
   .route("/admin/password-update/:id")
   .patch(catchErrors(adminController.updatePassword));
 //list of admins ends here
-
+/*
 //_____________________________________ API for clients __________________________
 router.route("/client/create").post(catchErrors(clientController.create));
 router.route("/client/read/:id").get(catchErrors(clientController.read));
@@ -50,7 +50,7 @@ router
   .delete(catchErrors(productController.delete));
 router.route("/product/search").get(catchErrors(productController.search));
 router.route("/product/list").get(catchErrors(productController.list));
-
+*/
 router.route("/routes").get(function () {
   let get = app._router.stack.filter(r => r.route && r.route.methods.get).map(r => r.route.path);
   let post = app._router.stack.filter(r => r.route && r.route.methods.post).map(r => r.route.path);

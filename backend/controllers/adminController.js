@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
-const Admin = mongoose.model("Admin");
+const Admin = require('../models/Admin');
+const asyncHandler = require('../handlers/asyncHandler');
+//const Admin = mongoose.model("Admin");
 
 /**
  *  Get all documents of a Model

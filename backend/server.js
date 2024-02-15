@@ -16,6 +16,7 @@ const glob = require("glob");
 const path = require("path");
 
 glob.sync("./models/*.js").forEach(function (file) {
+  console.log('model = ' + file);
   require(path.resolve(file));
 });
 
