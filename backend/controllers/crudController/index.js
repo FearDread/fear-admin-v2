@@ -2,8 +2,8 @@ const crudMethods = require("./crudMethods");
 const mongoose = require("mongoose");
 
 exports.crudController = (modelName) => {
-  //const Model = mongoose.model(modelName);
-  const Model = require('../models/' + modelName);
+  const Model = mongoose.model(modelName);
+  //const Model = require('../models/' + modelName);
   let methods = {};
 
   methods.create = async (req, res) => {

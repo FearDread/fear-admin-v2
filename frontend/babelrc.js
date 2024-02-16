@@ -1,5 +1,14 @@
-{
-    "plugins": [
+module.exports = {
+    presets: [require.resolve('next/babel')],
+    plugins: [
+      [
+        require.resolve('babel-plugin-import'),
+        { libraryName: 'antd' }
+      ]
+    ]
+  };
+/*
+{plugins: [
         [
             "import",
             {
@@ -8,7 +17,7 @@
             }
         ]
     ]
-}
+};
 // {
 //     "presets": [
 //         "@babel/env",
@@ -25,3 +34,4 @@
 //         ]
 //     ]
 // }
+*/

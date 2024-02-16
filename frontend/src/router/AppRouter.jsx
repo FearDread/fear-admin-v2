@@ -8,6 +8,7 @@ import PageLoader from "@/components/PageLoader";
 const Dashboard = lazy(() =>
   import(/*webpackChunkName:'DashboardPage'*/ "@/pages/Dashboard")
 );
+
 const Admin = lazy(() =>
   import(/*webpackChunkName:'AdminPage'*/ "@/pages/Admin")
 );
@@ -21,6 +22,7 @@ const SelectCustomer = lazy(() =>
 );
 
 const Lead = lazy(() => import(/*webpackChunkName:'LeadPage'*/ "@/pages/Lead"));
+
 const Product = lazy(() =>
   import(/*webpackChunkName:'ProductPage'*/ "@/pages/Product")
 );
